@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		/>
+		<!-- Google Material Icons -->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<!-- Custom Style Sheet -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='scripts/final_quiz/css/style.css') }}" />
+		<title>Quiz App!</title>
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='scripts/final_quiz/img/fav.png') }}" />
+	</head>
+	<body>
+		<div class="container box-shadow">
+			
+
+			<!-- Quiz Starts Here -->
+			<section id="theQuiz">
+				<form id="quizForm" onsubmit="return false;">
+					<h2>Quiz:</h2>
+
+					<div id="steps" style="text-align:center;">
+						<!-- Steps will be shown as per questions length -->
+					</div>
+
+					<hr />
+					<!-- One "tab" for each step in the form: -->
+					<div id="tab">
+						<p id="que">---Question---</p>
+						<hr />
+						<div class="custom-control custom-radio">
+							<input
+								type="radio"
+								id="opt1"
+								name="q"
+								class="custom-control-input"
+								onclick="enableBtn(this)"
+								value="1"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 1---</label
+							>
+						</div>
+						<div class="custom-control custom-radio">
+							<input
+								type="radio"
+								id="opt2"
+								name="q"
+								class="custom-control-input"
+								onclick="enableBtn(this)"
+								value="2"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 2---</label
+							>
+						</div>
+						<div class="custom-control custom-radio">
+							<input
+								type="radio"
+								id="opt3"
+								name="q"
+								class="custom-control-input"
+								onclick="enableBtn(this)"
+								value="3"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 3---</label
+							>
+						</div>
+						<div class="custom-control custom-radio">
+							<input
+								type="radio"
+								id="opt4"
+								name="q"
+								class="custom-control-input"
+								onclick="enableBtn(this)"
+								value="4"
+							/>
+							<label
+								class="custom-control-label"
+								onclick="var id = this.previousElementSibling.id; this.setAttribute('for', id)"
+								>---Option 4---</label
+							>
+						</div>
+					</div>
+
+					<div style="overflow:auto;">
+						<div style="float:right;">
+							<button
+								type="button"
+								disabled="disabled"
+								class="btn btn-info mb-2"
+								id="next-button"
+								onclick="next();"
+							>
+								Next
+							</button>
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<!-- The Result -->
+			<section id="theResult">
+				<div id="resultCircle">
+					Calculating Your Result...
+				</div>
+				<!-- Result Circle End -->
+				<br />
+				<h3 id="correctAns"></h3>
+				<hr />
+				<div class = "text-center">
+					<button class="btn btn-primary mt-5" id="submit_button" type="button">Submit</button>
+				</div>
+			</section>
+		</div>
+		<!-- Container End -->
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="{{ url_for('static', filename='scripts/final_quiz/js/questions.js') }}"></script>
+		<script src="{{ url_for('static', filename='scripts/final_quiz/js/script.js') }}"></script>
+	</body>
+</html>

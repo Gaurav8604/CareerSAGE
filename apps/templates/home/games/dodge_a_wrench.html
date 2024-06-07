@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='scripts/games/dodge_a_wrench/assets/css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <script type="application/javascript" src="{{ url_for('static', filename='scripts/games/dodge_a_wrench/bundle.js') }}"></script>
+    <title>Dodge a Wrench</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114518867-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114518867-2');
+    </script>
+
+  </head>
+  <body>
+    <div>
+      <canvas id="myCanvas" height="600" width="832"></canvas>
+      <div class="right-side">
+        <div class="header">
+          <div class="directions">
+            <h1>Dodge-A-Wrench</h1>
+            Keys:
+            <br/>
+            <ul>
+              <li>
+                -Use left/right arrow keys to move player
+              </li>
+              <li>
+                -Press Enter to Start/Pause Game
+              </li>
+              <li>
+                - Press 'M' to toggle music
+              </li>
+            </ul>
+            <br/>
+            Directions:
+            <ul>
+              <li>
+                -Avoid thrown wrenches as long as you can
+              </li>
+              <li>
+                -Collect the dragonballs to get buff and survive one wrench hit without
+                losing a life
+              </li>
+              <li>
+                -Get the highest score possible
+              </li>
+            </ul>
+          </div>
+        </div>
+        <canvas id="buttons" height="100" width="350"></canvas>
+      </div>
+    </div>
+  </body>
+</html>

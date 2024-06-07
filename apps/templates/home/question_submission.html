@@ -1,0 +1,47 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} GUIDE {% endblock %} 
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}
+        <div class="container-fluid bg-primary text-white">
+            <h1 class="text-center py-4 mb-1">SUBMITTED ANSWERS</h1>
+          </div>
+
+        <section class="section-header">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="mb-5">
+                        <table class="table">
+                            <tr>
+                                <th scope="col" id="class">Question No.</th>
+                                <th scope="col" id="teacher">Question</th>
+                                <th scope="col" id="males">Answer</th>
+                            </tr>
+                            <tbody id="table-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class = "text-center">
+                    <button class="btn btn-primary" id="submit_button" type="button">Submit</button>
+                </div>
+            </div>
+        </section>
+        <div id="contentContainer" style="display: none;">
+            {% include 'includes/preloader.html' %}
+        </div>  
+
+        <script src="{{ url_for('static', filename='scripts/question_submission.js') }}"></script>
+    </main>
+{% endblock content %}
+
+
+{% block javascripts %}{% endblock javascripts %}
+
+

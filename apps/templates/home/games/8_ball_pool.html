@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <title>Classic Pool Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='scripts/games/8_ball_pool/css/game-layout.css') }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='scripts/games/8_ball_pool/assets/sprites/favicon.png') }}"/>
+    <script src="{{ url_for('static', filename='scripts/games/8_ball_pool/js/lib/LAB.min.js') }}"></script>
+    <script>
+        $LAB
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/system/Keys.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/system/Color.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/geom/Vector2.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/input/ButtonState.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/input/Keyboard.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/input/Mouse.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/Global.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/Canvas2D.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/game_objects/Score.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/game_objects/Ball.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/game_objects/Stick.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/menu/Label.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/menu/Button.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/menu/Menu.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/menu/MainMenu.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/AI/Opponent.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/AI/AIPolicy.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/AI/AITrainer.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/game_objects/Player.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/GamePolicy.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/GameWorld.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/Game.js') }}").wait()
+                .script("{{ url_for('static', filename='scripts/games/8_ball_pool/js/Assets.js') }}").wait(function () {
+                    Game.start('gameArea','screen', 1500, 825);
+                });
+
+    </script>
+</head>
+
+<body style = "background-color:black">
+<div id="gameArea">
+    <canvas id="screen" width="2000" height="1000"></canvas>
+</div>
+</body>
+</html>

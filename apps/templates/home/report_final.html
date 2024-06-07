@@ -1,0 +1,41 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} GUIDE {% endblock %} 
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}
+        <div id="printit">
+        <div class="container-fluid bg-primary text-white">
+            <h1 class="text-center py-4 mb-1" id="title">FINAL REPORT</h1>
+          </div>
+          <div id="progresses"></div>
+          
+          
+          
+          <!-- <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-info" style="width: 50%"></div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-warning" style="width: 75%"></div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-danger" style="width: 100%"></div>
+          </div> -->
+        </div>
+          <div class = "text-center">
+            <button class="btn btn-primary mt-5" id="print_button" type="button">Print Report</button>
+        </div>
+        <script src="{{ url_for('static', filename='scripts/report_final.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    </main>
+{% endblock content %}
+
+
+{% block javascripts %}{% endblock javascripts %}
+
+

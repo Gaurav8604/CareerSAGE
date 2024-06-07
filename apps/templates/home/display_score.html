@@ -1,0 +1,33 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} GUIDE {% endblock %} 
+
+{% block stylesheets %}
+<link type="text/css" href="/static/assets/css/display_score.css" rel="stylesheet">
+
+{% endblock stylesheets %}
+
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}    
+        <div class="container-fluid bg-secondary text-white">
+            <h1 class="text-center py-5 mt-0 m-1">SCORES</h1>
+          </div>    
+          <div class="temp align-items-center">
+        <div class="cntnr"></div>
+    </div>
+    <div class = "text-center">
+        <button class="btn btn-primary mt-5" id="submit_button" type="button">Submit</button>
+    </div>
+    
+        <script src="{{ url_for('static', filename='scripts/display_score.js') }}"></script>
+    </main>
+{% endblock content %}
+
+
+{% block javascripts %}{% endblock javascripts %}
+
+

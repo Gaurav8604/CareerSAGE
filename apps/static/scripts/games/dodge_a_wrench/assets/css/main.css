@@ -1,0 +1,86 @@
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small, select{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-family: 'Gloria Hallelujah';
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/dodge_ball_bg.png');
+  background-size: cover;
+}
+
+body div {
+  display: flex;
+  justify-content: center;
+}
+
+#myCanvas{
+  overflow: hidden;
+}
+
+#buttons {
+  margin-left: 50px;
+}
+
+.right-side {
+  height: inherit;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  font-size: 16px;
+  color: white;
+  background-color: brown;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.directions {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: white;
+  background-color: brown;
+  padding: 15px;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 30px;
+}
+
+a {
+  margin-right: 15px;
+}
+
+a:hover {
+  color: gold;
+}

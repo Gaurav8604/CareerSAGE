@@ -1,0 +1,35 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} GUIDE {% endblock %} 
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}
+        <div class="container-fluid bg-primary text-white">
+            <h1 class="text-center py-4 mb-0">Game Selection</h1>
+        </div> 
+        
+        <div class="container text-center mt-5">
+            <div class="mb-4">
+              <h4>Your Genre is:</h4>
+              <div id="genre" class="display-4 text-danger font-weight-bold"></div>
+            </div>
+            <p class="mb-0">Based on your genre, we have suggested games for you to play</p>
+            <p>Select any one of the games below to continue</p>
+        </div>
+        <div class="container">
+            <div id="card-container" class="row justify-content-center "></div>
+        </div>
+
+        <script src="{{ url_for('static', filename='scripts/games_selection.js') }}"></script>
+    </main>
+{% endblock content %}
+
+
+{% block javascripts %}{% endblock javascripts %}
+
+

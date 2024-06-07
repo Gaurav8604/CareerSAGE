@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='scripts/games/sudoku/sudoku.css') }}">
+</head>
+<body>
+    <div class="d-flex justify-content-between">
+        <h1 class="m-1 p-5" style="font-size: 60px;">Sudoku Game</h1>
+        <p class="m-5" id="timer">05:00</p>
+    </div>
+    <div id="wrapper">
+        <canvas id="sudoku" width="450" height="450"></canvas>
+        <div id="instructions">
+            <ul>
+                <li>Arrow keys: move</li>
+                <li>Number keys: place numbers</li>
+                <li>Delete: delete numbers</li>
+            <ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/games/sudoku/sudoku.js') }}"></script>
+</body>
+</html>
